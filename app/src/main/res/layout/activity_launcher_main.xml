@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_gardient_bg"
+    tools:context=".activities.MainLauncherActivity">
+
+    <include
+        android:id="@+id/toolbaar"
+        layout="@layout/my_custom_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnGeneralUser"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+
+        android:src="@drawable/ic_user"
+        android:text="General User"
+        app:layout_constraintBottom_toTopOf="@+id/txtUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/light_blue" />
+
+    <TextView
+        android:id="@+id/txtUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:text="General User"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnAdmin"
+        app:layout_constraintEnd_toEndOf="@+id/btnAdmin"
+        app:layout_constraintStart_toStartOf="@+id/btnAdmin" />
+
+
+    <ImageView
+        android:id="@+id/btnAdmin"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:src="@drawable/ic_admin"
+        android:text="Admin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbaar"
+        app:tint="@color/light_blue" />
+
+    <TextView
+        android:id="@+id/txtAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="Admin"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnAdmin"
+        app:layout_constraintStart_toStartOf="@+id/btnAdmin"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdmin" />
+
+
+    <ImageView
+        android:id="@+id/btnEmployee"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:src="@drawable/ic_employee"
+        android:text="Employee"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAdmin"
+        app:tint="@color/light_blue" />
+
+    <TextView
+        android:id="@+id/txtEmployee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="Employee     "
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnEmployee"
+        app:layout_constraintStart_toStartOf="@+id/btnEmployee"
+        app:layout_constraintTop_toBottomOf="@+id/btnEmployee" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

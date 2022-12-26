@@ -1,0 +1,32 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+
+
+        maven { url "https://www.jitpack.io" }
+
+        maven { url 'https://mapbox.bintray.com/mapbox' }
+
+        maven {
+            url 'https://api.mapbox.com/downloads/v2/releases/maven'
+            authentication {
+                basic(BasicAuthentication)
+            }
+            credentials {
+                // Do not change the username below.
+                // This should always be `mapbox` (not your username).
+                username = "mapbox"
+                // Use the secret token you stored in gradle.properties as the password
+//                password = project.properties['MAPBOX_DOWNLOADS_TOKEN'] ?: ""
+//                password = gradle.properties['MAPBOX_DOWNLOADS_TOKEN'] ?: ""
+//                password = gradle.properties['MAPBOX_DOWNLOADS_TOKEN'] ?: "pk.eyJ1Ijoicm91dGVmaW5kZXIiLCJhIjoiY2tvY21jeDhmMDcxbDJ1cGg0cWpibGFqNyJ9.7gPNq7fVS7-0SQKseVnf6w"
+                password =  "pk.eyJ1Ijoicm91dGVmaW5kZXIiLCJhIjoiY2tvY21jeDhmMDcxbDJ1cGg0cWpibGFqNyJ9.7gPNq7fVS7-0SQKseVnf6w"
+            }
+        }
+    }
+}
+rootProject.name = "GarbageManagementApp"
+include ':app'

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "900885752794",
+    "firebase_url": "https://garbagemanagementapp-a783e-default-rtdb.firebaseio.com",
+    "project_id": "garbagemanagementapp-a783e",
+    "storage_bucket": "garbagemanagementapp-a783e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900885752794:android:d64ab7d14eb52a65ebaee3",
+        "android_client_info": {
+          "package_name": "com.logoutbye.garbagemanagementapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900885752794-pksscqf773oq55ettpuadt5eh2ivbqmq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx75gIpCnMMbfGhFi_H4P-E_oJeNz1gPg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900885752794-pksscqf773oq55ettpuadt5eh2ivbqmq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

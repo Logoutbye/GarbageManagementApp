@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_gardient_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.EmployeeHomeActivity">
+
+    <include
+        android:id="@+id/toolbaar"
+        layout="@layout/my_custom_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <ImageView
+        android:id="@+id/btnNearbyBin"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:src="@drawable/ic_bin_search"
+
+        app:layout_constraintBottom_toTopOf="@+id/txtBin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtBin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:text="Search Nearby Bin"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnInbox"
+        app:layout_constraintEnd_toEndOf="@+id/btnInbox"
+        app:layout_constraintStart_toStartOf="@+id/btnInbox" />
+
+
+    <ImageView
+        android:id="@+id/btnInbox"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:src="@drawable/ic_inbox"
+        android:text="Admin"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbaar"
+        app:tint="@color/light_blue" />
+
+    <TextView
+        android:id="@+id/txtInbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="Trash Pic Request"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnInbox"
+        app:layout_constraintStart_toStartOf="@+id/btnInbox"
+        app:layout_constraintTop_toBottomOf="@+id/btnInbox" />
+
+
+
+
+
+    <ImageView
+        android:id="@+id/btnAttendance"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:src="@drawable/ic_attendance_emp"
+        android:text="Admin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtInbox"
+        app:tint="@color/light_blue" />
+
+    <TextView
+        android:id="@+id/txtAttendace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="Mark Attendance"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnAttendance"
+        app:layout_constraintStart_toStartOf="@+id/btnAttendance"
+        app:layout_constraintTop_toBottomOf="@+id/btnAttendance" />
+
+
+
+
+
+
+
+    <ImageView
+        android:id="@+id/btnSignOut"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:src="@drawable/ic_logout"
+        app:layout_constraintBottom_toTopOf="@+id/txtSignout"
+        app:layout_constraintEnd_toEndOf="@+id/txtSignout"
+        app:layout_constraintStart_toStartOf="@+id/txtSignout"
+        app:tint="@color/light_blue" />
+
+    <TextView
+        android:id="@+id/txtSignout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:text="Sign Out"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+    <ImageView
+        android:id="@+id/btnComplain"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:src="@drawable/ic_email"
+        app:layout_constraintBottom_toTopOf="@+id/txtComplain"
+        app:layout_constraintEnd_toEndOf="@+id/txtComplain"
+        app:layout_constraintStart_toStartOf="@+id/txtComplain"
+        app:tint="@color/light_blue" />
+
+    <TextView
+        android:id="@+id/txtComplain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:text="Complain"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

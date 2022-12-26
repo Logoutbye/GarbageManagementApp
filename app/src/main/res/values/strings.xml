@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PakSaf</string>
+
+
+    <string name="minimum_password">Password too short, enter minimum 6 characters!</string>
+    <string name="auth_failed">Please, check your email and password or Sign up</string>
+    <string name="MAPBOX_TOKEN">pk.eyJ1Ijoicm91dGVmaW5kZXIiLCJhIjoiY2tvY21jeDhmMDcxbDJ1cGg0cWpibGFqNyJ9.7gPNq7fVS7-0SQKseVnf6w"</string>
+
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="greenish">#009688</color>
+    <color name="yellow">#8BC34A</color>
+    <color name="gray">#C7CAC2</color>
+    <color name="gradstart">#013558</color>
+    <color name="gradend">#17a7c1</color>
+    <color name="gradMid">#1E93A8</color>
+
+
+    <color name="red">#E4819E</color>
+
+    <color name="lightblue">#2bbefc</color>
+
+    <color name="green">#82E499</color>
+
+    <color name="light_green">#9fe6be</color>
+
+    <color name="lightgrey">#B2BABB</color>
+
+    <color name="rolecolor">#7b7b7b</color>
+
+    <color name="lowgray">#d1dcdc</color>
+
+    <color name="message_back">#eeeeee</color>
+
+    <color name="light_blue">#c0dfff</color>
+
+    <color name="blue_light">#4895ef</color>
+
+    <color name="blue_bright">#004d99</color>
+
+    <color name="message">#898989</color>
+
+    <color name="comment_highlight">#E5EDF4</color>
+
+    <color name="broadcast_notif">#f77d04</color>
+
+    <color name="text_color">#485866</color>
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_gardient_bg"
+    tools:context=".activities.AdminHomeActivity">
+
+    <include
+        android:id="@+id/toolbaar"
+        layout="@layout/my_custom_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnAddEmployee"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+
+        android:src="@drawable/ic_user_add"
+
+        app:layout_constraintBottom_toTopOf="@+id/txtAddEmp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/light_blue" />
+
+    <TextView
+        android:id="@+id/txtAddEmp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:text="Add Employee"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnSendNotif"
+        app:layout_constraintEnd_toEndOf="@+id/btnSendNotif"
+        app:layout_constraintStart_toStartOf="@+id/btnSendNotif" />
+
+
+    <ImageView
+        android:id="@+id/btnSendNotif"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:src="@drawable/ic_send_notif"
+        android:text="Admin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbaar"
+        app:tint="@color/light_blue" />
+
+    <TextView
+        android:id="@+id/txtNotif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="Send Notification"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnSendNotif"
+        app:layout_constraintStart_toStartOf="@+id/btnSendNotif"
+        app:layout_constraintTop_toBottomOf="@+id/btnSendNotif" />
+
+
+    <ImageView
+        android:id="@+id/btnSignOut"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:src="@drawable/ic_logout"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNotif"
+        app:tint="@color/light_blue" />
+
+    <TextView
+        android:id="@+id/txtSignout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="Sign Out"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnSignOut"
+        app:layout_constraintStart_toStartOf="@+id/btnSignOut"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignOut" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

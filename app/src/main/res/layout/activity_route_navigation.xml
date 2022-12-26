@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".activities.RouteTypeNavigationReadyActivity">
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:elevation="@dimen/_5sdp"
+        android:background="@color/gradMid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgBackArrow"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewTop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewTop" />
+
+        <TextView
+            android:id="@+id/textViewTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Navigate"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:mapbox_uiLogoGravity="right|start|bottom"
+
+        app:layout_constraintBottom_toTopOf="@+id/lineBottom20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clTop"
+        app:mapbox_cameraZoom="11.7" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnNavigate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/mapbox_blue"
+        android:elevation="@dimen/_2sdp"
+        android:src="@drawable/ic_navigation"
+        app:layout_constraintBottom_toTopOf="@+id/lineBottom20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lineBottom20" />
+
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <!--        android:id="@+id/btnBike"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:backgroundTint="@color/gradMid"-->
+    <!--        android:elevation="@dimen/_2sdp"-->
+    <!--        android:src="@drawable/ic_bike"-->
+    <!--        android:layout_marginStart="@dimen/_16sdp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/clBottom"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/cvCar"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/cvCar" />-->
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBike"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardBackgroundColor="@color/gradMid"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:elevation="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@+id/clBottom"
+        app:layout_constraintStart_toEndOf="@+id/cvCar"
+        app:layout_constraintTop_toTopOf="@+id/cvCar">
+
+        <ImageView
+            android:id="@+id/btnBike"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_bike"
+            android:layout_gravity="center"
+            android:padding="@dimen/_10sdp"
+            app:tint="@color/white"
+            android:scaleType="fitXY"/>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCar"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardBackgroundColor="@color/gradMid"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:elevation="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNavigate"
+        app:layout_constraintEnd_toEndOf="@+id/btnNavigate"
+        app:layout_constraintStart_toStartOf="@+id/btnNavigate">
+
+        <ImageView
+            android:id="@+id/btnCar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_car"
+            android:layout_gravity="center"
+            android:padding="@dimen/_10sdp"
+            app:tint="@color/white"
+            android:scaleType="fitXY"/>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvWalk"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardBackgroundColor="@color/gradMid"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:elevation="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@+id/clBottom"
+        app:layout_constraintEnd_toStartOf="@+id/cvCar"
+        app:layout_constraintTop_toTopOf="@+id/cvCar">
+
+        <ImageView
+            android:id="@+id/btnWalk"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_walk"
+            android:layout_gravity="center"
+            android:padding="@dimen/_11sdp"
+            app:tint="@color/white"
+            android:scaleType="fitXY"/>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+    <!--    <ImageSwitcher-->
+    <!--        android:id="@+id/btnWalk"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@color/gradMid"-->
+    <!--        android:backgroundTint="@color/gradMid"-->
+    <!--        android:elevation="@dimen/_2sdp"-->
+    <!--        android:src="@drawable/ic_walk"-->
+    <!--        android:layout_marginEnd="@dimen/_16sdp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/clBottom"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/btnCar"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/btnCar" />-->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lineBottom20"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.84"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+    <ImageView
+        android:id="@+id/clBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:src="@drawable/shape_gardient_bg"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="@dimen/_2sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <!--    <com.google.android.material.button.MaterialButtonToggleGroup-->
+    <!--        android:id="@+id/toggleGroup"-->
+    <!--        android:layout_width="@dimen/_80sdp"-->
+    <!--        android:layout_height="@dimen/_30sdp"-->
+    <!--        android:layout_marginBottom="@dimen/_2sdp"-->
+
+    <!--        app:checkedButton="@id/btnKm"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/cvCar"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:singleSelection="true">-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/btnMile"-->
+    <!--            style="@style/Widget.MaterialComponents.Button.OutlinedButton"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:text="Mi" />-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/btnKm"-->
+    <!--            style="@style/Widget.MaterialComponents.Button.OutlinedButton"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:text="Km" />-->
+
+    <!--    </com.google.android.material.button.MaterialButtonToggleGroup>-->
+
+
+
+    <!--        <androidx.cardview.widget.CardView-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="@dimen/_8sdp"-->
+    <!--            android:layout_marginEnd="@dimen/_8sdp"-->
+    <!--            android:elevation="@dimen/_2sdp"-->
+    <!--            app:cardBackgroundColor="@color/white"-->
+    <!--            app:cardCornerRadius="@dimen/_4sdp"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toStartOf="@+id/guideline12"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent">-->
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:lines="1"
+        android:maxLines="1"
+        android:text="Time:00:00 m"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/clBottom"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clBottom" />
+
+    <!--        </androidx.cardview.widget.CardView>-->
+
+
+    <!--        <androidx.cardview.widget.CardView-->
+    <!--            android:id="@+id/cardView"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginEnd="@dimen/_8sdp"-->
+    <!--            android:elevation="@dimen/_2sdp"-->
+    <!--            app:cardBackgroundColor="@color/white"-->
+    <!--            app:cardCornerRadius="@dimen/_4sdp"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="@+id/guideline12"-->
+    <!--            app:layout_constraintTop_toTopOf="parent">-->
+
+
+    <TextView
+        android:id="@+id/txtDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:lines="1"
+        android:maxLines="1"
+        android:text="Dist:000 km"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/clBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintTop_toTopOf="@+id/clBottom" />
+
+    <!--        </androidx.cardview.widget.CardView>-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

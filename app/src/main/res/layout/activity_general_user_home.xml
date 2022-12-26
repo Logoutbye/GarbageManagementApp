@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_gardient_bg"
+    tools:context=".activities.GeneralUserHomeActivity">
+    <include
+        android:id="@+id/toolbaar"
+        layout="@layout/my_custom_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    <ImageView
+        android:id="@+id/btnTrashRequest"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+
+        android:src="@drawable/ic_bin_request"
+
+        app:layout_constraintBottom_toTopOf="@+id/txtTrashRequest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/light_blue" />
+
+    <TextView
+        android:id="@+id/txtTrashRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:text="Send Trash Request"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnNearByBin"
+        app:layout_constraintEnd_toEndOf="@+id/btnNearByBin"
+        app:layout_constraintStart_toStartOf="@+id/btnNearByBin" />
+
+
+    <ImageView
+        android:id="@+id/btnNearByBin"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:src="@drawable/ic_bin_search"
+        android:text="Admin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbaar" />
+
+    <TextView
+        android:id="@+id/txtNearByBin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="Search Nearby Bins"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnNearByBin"
+        app:layout_constraintStart_toStartOf="@+id/btnNearByBin"
+        app:layout_constraintTop_toBottomOf="@+id/btnNearByBin" />
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/btnAttendance"-->
+<!--        android:layout_width="@dimen/_80sdp"-->
+<!--        android:layout_height="@dimen/_80sdp"-->
+<!--        android:src="@drawable/ic_attendance_emp"-->
+<!--        android:text="Admin"-->
+<!--        android:layout_marginTop="@dimen/_16sdp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txtNearByBin"-->
+<!--        app:tint="@color/light_blue" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtAttendace"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="@dimen/_4sdp"-->
+<!--        android:text="Mark Attendance"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="@dimen/_12ssp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/btnAttendance"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/btnAttendance"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btnAttendance" />-->
+
+
+    <ImageView
+        android:id="@+id/btnSignOut"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:src="@drawable/ic_logout"
+        app:layout_constraintBottom_toTopOf="@+id/txtSignout"
+        app:layout_constraintEnd_toEndOf="@+id/txtSignout"
+        app:layout_constraintStart_toStartOf="@+id/txtSignout"
+        app:tint="@color/light_blue" />
+
+    <TextView
+        android:id="@+id/txtSignout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:text="Sign Out"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/btnFeedBack"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:src="@drawable/ic_feedback"
+        app:layout_constraintBottom_toTopOf="@+id/txtFeedBack"
+        app:layout_constraintEnd_toEndOf="@+id/txtFeedBack"
+        app:layout_constraintStart_toStartOf="@+id/txtFeedBack"
+        app:tint="@color/light_blue" />
+
+    <TextView
+        android:id="@+id/txtFeedBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:text="Feedback"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+<!--    <Button-->
+<!--        android:id="@+id/btnSignOut"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="general Sign Out"-->
+<!--        android:layout_marginTop="@dimen/_16sdp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+
+<!--    <Button-->
+<!--        android:id="@+id/btnTrashRequest"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Send Trash Request"-->
+<!--        android:layout_marginTop="@dimen/_16sdp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btnSignOut" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnMap"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="map"-->
+<!--        android:layout_marginTop="@dimen/_8sdp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btnTrashRequest" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".">
+
+
+    <include
+        android:id="@+id/toolbaar"
+        layout="@layout/my_custom_toolbar"
+        android:elevation="@dimen/_2sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/clRv"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/gradMid"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/topBar">-->
+
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/rvNearby"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:background="@color/transparent"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+
+<!--            app:spanCount="3"-->
+<!--            tools:itemCount="6"-->
+<!--            tools:listitem="@layout/rv_item_nearby_places" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/btnSearch"-->
+<!--            android:layout_width="@dimen/_32sdp"-->
+<!--            android:layout_height="@dimen/_32sdp"-->
+<!--            -->
+<!--            android:src="@drawable/ic_search"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/rvNearby" />-->
+
+<!--        <View-->
+<!--            android:id="@+id/dumyView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/_6sdp"-->
+
+<!--            app:layout_constraintTop_toBottomOf="@+id/rvNearby" />-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbaar" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/myLocationImg"-->
+<!--        android:layout_width="@dimen/_40sdp"-->
+<!--        android:layout_height="@dimen/_40sdp"-->
+<!--        android:elevation="@dimen/_8sdp"-->
+<!--        android:layout_marginEnd="@dimen/_8sdp"-->
+<!--        android:layout_marginBottom="@dimen/_8sdp"-->
+<!--        android:src="@drawable/ic_current_loc"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/mapView" />-->
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
